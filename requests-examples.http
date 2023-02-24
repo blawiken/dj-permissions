@@ -23,7 +23,7 @@ Authorization: Token 70229b3974f03a0559f29fb4d94bcb245648fc7f
 # попытка поменять объявление
 PATCH {{baseUrl}}/advertisements/1/
 Content-Type: application/json
-Authorization: Token 70229b3974f03a0559f29fb4d94bcb245648fc7f
+Authorization: Token a70bec1dffcded195c42060d769ae0c1a7cd0dc8
 
 {
   "status": "CLOSED"

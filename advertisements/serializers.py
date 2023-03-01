@@ -43,8 +43,9 @@ class AdvertisementSerializer(serializers.ModelSerializer):
 
         creator = self.context['request'].user
         request = self.context['request'].method
+        status = data.get('status')
 
-        if request == 'POST':
+        if request == 'POST' or status == 'OPEN':
             if Advertisement.objects.filter(creator=creator).filter(status='OPEN').count() >= 10:
                 raise ValidationError('You can\'t have more than 10 open adverts')
 
